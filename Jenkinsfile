@@ -2,14 +2,17 @@ pipeline {
     agent any
 
     stages {
-        stage("build"){
+        stage("Baixando a imagem"){
             steps {
-                echo "buildando a aplicação 2..."
+                git 'https://github.com/gilbertolira/Desafio360.git'
             } 
         }
-        stage("test"){
+        stage("Buildando"){
             steps {
-               echo "testando a aplicação 2..." 
+               script {
+                    dockerImage = docker.build teste
+                }
+               
             }
         }
         stage("deploy"){
