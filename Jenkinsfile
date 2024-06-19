@@ -18,7 +18,7 @@ pipeline {
         stage ("Build Image"){
             steps{
                 script{
-                  dockerImage =  docker.build("betolira/django-crm:${env.BUILD_ID}", '-f ./src/desafio360/django_crm/Dockerfile .')
+                  dockerImage =  docker.build("betolira/django-crm:${env.BUILD_ID}", '-f ./desafio360/django_crm/Dockerfile .')
                 }
             }
 
