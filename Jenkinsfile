@@ -4,14 +4,13 @@ pipeline {
     stages {
         stage("Baixando a imagem"){
             steps {
-                git 'https://github.com/gilbertolira/Desafio360.git'
+                git url: 'https://github.com/gilbertolira/Desafio360.git', branch: 'develop'
             } 
         }
         stage("Buildando"){
             steps {
                script {
-                    dockerImage = docker.build teste
-                }
+                    dockerImage = docker.build("betolira/django-crm:v1")
                
             }
         }
