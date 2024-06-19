@@ -9,12 +9,7 @@ pipeline {
             }        
         }
         
-        stage("Baixando a imagem"){
-            steps {
-                git url: 'https://github.com/gilbertolira/Desafio360.git', branch: 'develop'
-            } 
-        }
-       
+              
         
     }
 }    
