@@ -6,7 +6,7 @@ pipeline {
             steps {
                 git url: 'https://github.com/gilbertolira/Desafio360.git', branch: 'develop'
             } 
-        }}
+        }
        
         stage("deploy"){
             steps {
@@ -14,5 +14,6 @@ pipeline {
             }        
         }
     }
+}    
 
         
